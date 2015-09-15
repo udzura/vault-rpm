@@ -39,7 +39,7 @@ cp %{SOURCE5} %{buildroot}/%{scriptdir}
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}/ssl
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}/policies
-mkdir -p %{scriptdir}
+mkdir -p %{buildroot}/%{scriptdir}
 
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
