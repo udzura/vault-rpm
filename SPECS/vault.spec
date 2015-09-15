@@ -1,5 +1,5 @@
 Name:           vault
-Version:        0.1.2
+Version:        0.2.0
 Release:        3%{?dist}
 Summary:        A tool for managing secrets
 
@@ -26,7 +26,7 @@ Requires(pre): shadow-utils
 A tool for managing secrets
 
 %prep
-%setup -T -q -c -b 0 
+%setup -T -q -c -b 0
 
 %install
 mkdir -p %{buildroot}/%{_bindir}
