@@ -12,9 +12,9 @@ Source2:	vault-bootstrap.sh
 Source3:	vault-unseal.sh
 Source4:	vault-health-check.sh
 Source5:	vault-register-with-consul.sh
-requires:	consul-utils, jq
+requires:	systemd
 
-%global scriptdir /usr/local/bin
+%global scriptdir /usr/libexec/vault
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
 BuildRequires:  systemd-units
@@ -39,6 +39,7 @@ cp %{SOURCE5} %{buildroot}/%{scriptdir}
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}/ssl
 mkdir -p %{buildroot}/%{_sysconfdir}/%{name}/policies
+mkdir -p %{scriptdir}
 
 
 %if 0%{?fedora} >= 14 || 0%{?rhel} >= 7
